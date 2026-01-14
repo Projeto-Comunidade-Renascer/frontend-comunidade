@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playball&display=swap");
+
+:root {
+  --primary-color: #e9d7c0;
+  --secondary-color: #dead9c;
+  --third-color: #a4896c;
+  --fourth-color: #9cb6ad;
+  --fifth-color: #f3ebe1;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  color: var(--fifth-color);
+  background: var(--fourth-color);
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 10px;
+  border-bottom: var(--fifth-color) 1px solid;
+}
+
+.nome_logo {
+  font-family: "Playball", sans-serif;
+  text-align: center;
+}
+
+.contatos {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.contatos h4 {
+  font-weight: bolder;
+}
+
+.texto_logo {
+  max-width: 200px;
+  line-height: 1.25;
+  padding: 15px 0 0 0;
+}
+
+.links {
+  list-style-type: none;
+}
+
+.links li {
+  padding: 15px 0 0 0;
+}
+
+.links li a {
+  text-decoration: none;
+  color: var(--fifth-color);
+}
+
+.texto_redes {
+  max-width: 250px;
+  line-height: 1.25;
+  padding: 15px 0 0 0;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bottom p {
+  max-width: 680px;
+  text-align: center;
+  line-height: 1.25;
+  padding: 0 30px;
+}
