@@ -1,6 +1,9 @@
 import "./footer.css";
 
 const Footer = () => {
+
+  let data = new Date().getFullYear()
+
   return (
     <footer className="footer">
       <div className="top">
@@ -36,7 +39,7 @@ const Footer = () => {
 
       <div className="bottom">
         <p>
-          &copy; 2025 Renascer Mulher. Todos os direitos reservados. Feito com 🤎
+          &copy; {data} Renascer Mulher. Todos os direitos reservados. Feito com 🤎
           para uma maternidade acolhedora.
         </p>
       </div>
