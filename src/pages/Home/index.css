@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playball&display=swap');
+
+:root{
+    --primary-color: #E9D7C0;
+    --secondary-color: #DEAD9C;
+    --third-color: #A4896C;
+    --fourth-color: #9CB6AD;
+    --fifth-color: #F3EBE1;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sobre-comunidade{
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    font-family: "Libre Bodoni", serif;
+    color: var(--secondary-color);
+}

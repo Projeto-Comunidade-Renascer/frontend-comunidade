@@ -2,6 +2,7 @@ import './Header.css';
 import { FaSearch, FaUserAlt } from 'react-icons/fa'; // Importa ícones de lupa e usuário da biblioteca React Icons.
 import bannerImage from '../../assets/img/banner.png';
 
+
 // Componente funcional Header: Representa o banner superior da página principal.
 const Header = () => {
   return (
