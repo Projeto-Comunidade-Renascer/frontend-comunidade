@@ -1,7 +1,6 @@
-import React from 'react'; // Importa a biblioteca React para criar componentes.
-import './Header.css'; // Importa o arquivo de estilos CSS associado.
+import './Header.css';
 import { FaSearch, FaUserAlt } from 'react-icons/fa'; // Importa ícones de lupa e usuário da biblioteca React Icons.
-import bannerImage from '../../assets/img/banner.png'; // Importa a imagem do banner.
+import bannerImage from '../../assets/img/banner.png';
 
 // Componente funcional Header: Representa o banner superior da página principal.
 const Header = () => {
@@ -19,9 +18,8 @@ const Header = () => {
         
         <div className="search-logo">
           <div className="search-bar">
-              <FaSearch className="search-icon" /> {/* Ícone de lupa para busca. */}
-              <input type="text" placeholder="Pesquise aqui" /> {/* Campo de input para pesquisa. */}
-               {/* Ícone de usuário: Representa perfil ou login. */}
+              <FaSearch className="search-icon" />
+              <input type="text" placeholder="Pesquise aqui" />
                
             </div>
             <FaUserAlt className="user-icon" />
@@ -34,11 +32,11 @@ const Header = () => {
         {/* Menu de navegação: Lista de itens centrais. */}
         <div className="menu-container">
         <ul className="menu">
-          <li>Comunidade</li> {/* Item de menu: Link para seção de comunidade. */}
-          <li>Tentantes</li> {/* Item para tentantes (mulheres tentando engravidar). */}
-          <li>Gravidez</li> {/* Item para gravidez. */}
-          <li>Maternidade</li> {/* Item para maternidade. */}
-          <li>Bebês</li> {/* Item para bebês. */}
+          <li>Comunidade</li>
+          <li>Tentantes</li>
+          <li>Gravidez</li>
+          <li>Maternidade</li>
+          <li>Bebês</li> 
         </ul>
         </div>
         
@@ -54,4 +52,4 @@ const Header = () => {
   );
 };
 
-export default Header; // Exporta o componente para uso em outras partes da app (ex: App.jsx).
+export default Header;

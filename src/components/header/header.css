@@ -132,9 +132,15 @@
   cursor: pointer; /* Mãozinha ao hover, indica clique. */
   font-size: 20px;
   gap: 30px;
+  padding: 10px;
+  transition: ease-in 0.3s;
 }
 
-
+.menu li:hover{
+  color: var(--fifth-color);
+  background-color: var(--fourth-color);
+  border-radius: 10px;
+}
 
 /* Seção hero: Background image com texto central. */
 .hero {
