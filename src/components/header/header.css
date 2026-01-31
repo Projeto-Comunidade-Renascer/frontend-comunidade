@@ -90,12 +90,12 @@
   justify-content: center;
   padding: 5px;
   font-size: 18px;
-  font-family: Libre Bodoni, serif;
+  font-family: "Libre Bodoni", serif;
 }
 
 .search-bar input::placeholder {
   color: var(--primary-color); /* Cor do placeholder. */
-  font-family: Libre Bodoni, serif;
+  font-family: "Libre Bodoni", serif;
   font-size: 18px;
 
 }
@@ -113,7 +113,7 @@
   justify-content: center;
   align-items: center; /* Alinha verticalmente no centro. */
   padding: 10px 20px; /* Espaçamento interno. */
-  font-family: Libre Bodoni, serif;
+  font-family: "Libre Bodoni", serif;
   font-size: 25px;
   gap: 30px;
 }
@@ -132,9 +132,15 @@
   cursor: pointer; /* Mãozinha ao hover, indica clique. */
   font-size: 20px;
   gap: 30px;
+  padding: 10px;
+  transition: ease-in 0.3s;
 }
 
-
+.menu li:hover{
+  color: var(--fifth-color);
+  background-color: var(--fourth-color);
+  border-radius: 10px;
+}
 
 /* Seção hero: Background image com texto central. */
 .hero {
