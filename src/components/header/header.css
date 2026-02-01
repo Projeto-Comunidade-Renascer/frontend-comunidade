@@ -162,3 +162,10 @@
   line-height: 1.25;                /* espaço bom entre as duas linhas */
   padding: 0 30px;                  /* evita encostar nas bordas laterais em telas menores */
 }
+
+/* No desktop, o ícone de hambúrguer não aparece */
+.menu-icon-mobile {
+  display: none;
+  cursor: pointer;
+}
+
