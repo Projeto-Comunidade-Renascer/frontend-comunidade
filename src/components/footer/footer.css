@@ -28,12 +28,15 @@
 .nome_logo {
   font-family: "Playball", sans-serif;
   text-align: center;
+  color: var(--fifth-color);
+  font-size: 25px;
 }
 
 .contatos {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  font-size: 18px;
 }
 
 .contatos h4 {
