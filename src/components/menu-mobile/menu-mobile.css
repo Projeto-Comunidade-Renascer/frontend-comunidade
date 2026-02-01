@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playball&display=swap");
+
+:root {
+  --primary-color: #e9d7c0;
+  --secondary-color: #dead9c;
+  --third-color: #a4896c;
+  --fourth-color: #9cb6ad;
+  --fifth-color: #f3ebe1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* No Mobile (Ex: max-width 768px) */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none; /* Esconde a busca e o menu horizontal */
+  }
+
+  /* Ajusta o container principal do header no mobile */
+  .header {
+    height: 60vh; /* Faz o header ocupar 60% da altura da tela do celular */
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Faz a imagem do banner cobrir todo o espaço definido */
+  .banner-img {
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover; /* Mantém a proporção da foto cortando as laterais, se necessário */
+  }
+
+  /* Dá mais espaço para o texto da Hero */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%; /* Ocupa a maior parte do header */
+    padding: 0 20px;
+  }
+
+  .hero-text {
+    font-size: 2rem; /* Aumenta um pouco a fonte para destaque */
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-left: 0;
+  }
+
+  .topper {
+    padding: 10px;
+  }
+
+  .menu-icon-mobile {
+    display: block; /* Mostra o hambúrguer */
+    font-size: 2rem;
+  }
+}
+
+/* Estilo do Menu Mobile (Sidebar) */
+.mobile-user-section {
+  font-size: 18px;
+  color: var(--third-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar-mobile {
+  display: flex; /* Alinha ícone e input. */
+  align-items: center; /* Centro vertical. */
+  background-color: transparent;
+  border-radius: 20px; /* Bordas arredondadas como no Figma. */
+  padding: 3px; /* Espaçamento interno. */
+  color: var(--third-color);
+  border: solid 1px var(--third-color);
+}
+
+.search-icon {
+  margin-right: 10px; /* Espaço entre ícone e input. */
+  color: var(--third-color);
+}
+
+.search-bar-mobile input {
+  border: none; /* Sem borda. */
+  outline: none; /* Sem outline ao foco. */
+  background: transparent; /* Transparente para herdar do container. */
+  width: 130px; /* Largura aproximada. */
+  color: var(--third-color);
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 18px;
+  font-family: "Libre Bodoni", serif;
+}
+
+.search-bar-mobile input::placeholder {
+  color: var(--third-color); /* Cor do placeholder. */
+  font-family: "Libre Bodoni", serif;
+  font-size: 18px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--third-color);
+  font-size: 24px;
+  padding: 15px;
+  position: relative;
+  right: -190px;
+}
+
+.menu-mobile-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Começa escondido fora da tela */
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.menu-mobile-overlay.active {
+  left: 0; /* Desliza para dentro */
+}
+
+.menu-mobile-content {
+  width: 70%;
+  height: 100%;
+  background: #fdf5e6; /* Cor de fundo do seu design */
+  float: left;
+  padding: 20px;
+}
+
+.mobile-nav ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-nav li {
+  list-style: none;
+  margin: 15px 0;
+  color: var(--third-color);
+  font-family: "Libre Bodoni", serif;
+  font-size: 18px;
+}

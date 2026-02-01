@@ -1,37 +1,36 @@
-import './Header.css';
-import { FaSearch, FaUserAlt } from 'react-icons/fa'; // Importa ícones de lupa e usuário da biblioteca React Icons.
+import { useState } from 'react'; // 1. Importar o hook
+import './header.css';
+import { FaSearch, FaUserAlt, FaBars } from 'react-icons/fa'; // Adicionei FaBars
+import { BsFillPersonLinesFill } from "react-icons/bs";
+import MenuMobile from '../menu-mobile/MenuMobile'; // Importar o componente novo
 import bannerImage from '../../assets/img/banner.png';
 
-
-// Componente funcional Header: Representa o banner superior da página principal.
 const Header = () => {
+  const [menuAberto, setMenuAberto] = useState(false); // 2. Estado do menu
+
   return (
-    // Elemento principal do header, com classe para estilização geral.
     <header className="header">
+      {/* 3. Chamar o Menu Mobile passando o estado e a função de fechar */}
+      <MenuMobile isOpen={menuAberto} onClose={() => setMenuAberto(false)} />
 
-    <img src={bannerImage} alt="Banner" className='banner-img' />
+      <img src={bannerImage} alt="Banner" className='banner-img' />
 
-    <div className='topper'>
-      {/* Logo do site: Texto estilizado como no Figma. */}
-          <div className="logo">
-            Renascer Mulher
+      <div className='topper'>
+          <div className="logo">Renascer Mulher</div>
+          
+          <div className="search-logo">
+            <div className="search-bar desktop-only"> {/* Classe para sumir no mobile */}
+                <FaSearch className="search-icon" />
+                <input type="text" placeholder="Pesquise aqui" />
+            </div>
+            <FaUserAlt className="user-icon desktop-only" />
+            
+            {/* 4. Ícone Hambúrguer: Só aparece no mobile via CSS */}
+            <BsFillPersonLinesFill className="menu-icon-mobile" onClick={() => setMenuAberto(true)} />
           </div>
-        
-        <div className="search-logo">
-          <div className="search-bar">
-              <FaSearch className="search-icon" />
-              <input type="text" placeholder="Pesquise aqui" />
-               
-            </div>
-            <FaUserAlt className="user-icon" />
-            </div>
-        </div>
-      
-      {/* Navbar superior: Contém logo, menu, busca e ícone de usuário. */}
-      <nav className="navbar">
-        
-        {/* Menu de navegação: Lista de itens centrais. */}
-        <div className="menu-container">
+      </div>
+
+      <nav className="navbar desktop-only"> {/* Esconde a lista original no mobile */}
         <ul className="menu">
           <li>Comunidade</li>
           <li>Tentantes</li>
@@ -39,16 +38,11 @@ const Header = () => {
           <li>Maternidade</li>
           <li>Bebês</li> 
         </ul>
-        </div>
-        
       </nav>
-      
-      {/* Seção hero: Imagem de fundo com texto overlay. */}
+
       <div className="hero">
-        {/* Texto principal do banner, centralizado sobre a imagem. */}
         <h1 className="hero-text">Quando uma vida nasce, uma nova mulher desperta.</h1>
       </div>
-      
     </header>
   );
 };
