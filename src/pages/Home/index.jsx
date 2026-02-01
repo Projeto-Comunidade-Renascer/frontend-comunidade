@@ -1,6 +1,9 @@
 import Header from "./../../components/header/Header.jsx";
 import './index.css';
 import comunidadeImg from '../../assets/img/gravida.png';
+import Footer from "../../components/footer/Footer.jsx";
+import Ferramentas from "../../components/ferramentas/Ferramentas.jsx";
+
 
 function Index() {
 
@@ -18,10 +21,10 @@ function Index() {
                         <p>Nosso objetivo é criar um espaço acolhedor para compartilhar informações e experiências sobre as dificuldades da gravidez, desafios e dicas da maternidade. Queremos oferecer apoio para que você se sinta ouvida e encorajada a enfrentar os altos e baixos dessa fase tão especial. Além disso, disponibilizamos conteúdos sobre cuidados com a saúde durante a gestação e orientações práticas para o dia a dia com o bebê</p>
                         <button>Participe da comunidade!</button>
                     </div>
-                    
                 </div>
-                
+                <Ferramentas/>
             </main>
+            <Footer />
         </>
         )
 
