@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playball&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playball&display=swap');
 
 :root {
-  --primary-color: #e9d7c0;
-  --secondary-color: #dead9c;
-  --third-color: #a4896c;
-  --fourth-color: #9cb6ad;
-  --fifth-color: #f3ebe1;
+  --primary-color: #E9D7C0;
+  --secondary-color: #DEAD9C;
+  --third-color: #A4896C;
+  --fourth-color: #9CB6AD;
+  --fifth-color: #F3EBE1;
 }
 
 * {
@@ -13,65 +13,74 @@
   padding: 0;
   box-sizing: border-box;
 }
+.conteudo-principal {
+  padding: 60px 0;
+}
 
 .sobre-comunidade {
   display: flex;
-  flex-direction: column;
-}
-
-h2 {
-  font-family: "Libre Bodoni", serif;
-  color: var(--secondary-color);
-  font-size: 35px;
-  padding: 50px;
-}
-
-.conteudo-principal {
-  padding: 80px 0;
-}
-
-.conteudo-principal .sobre-comunidade {
-  display: flex;
   align-items: center;
-  margin: 0 10%;
-  flex-direction: row-reverse;
-  flex-wrap: nowrap;
+  gap: 40px;
+  flex-direction: row-reverse; /* Imagem na direita no PC */
+  margin-bottom: 80px;
 }
 
-.sobre-comunidade .img-comunidade-sec {
-  width: 400px;
+.img-comunidade-sec {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.comunidade-img {
+  max-width: 100%;
   height: auto;
+  border-radius: 15px;
 }
 
-.sec-sobre-nossa-comunidade{
-    justify-content: center;
+.sec-sobre-nossa-comunidade {
+  font-family: "Philosopher", sans-serif;
+  padding: 5%;
+  font-size: 25px;
+  flex: 1;
+  text-align: center;
+  color: var(--third-color);
+}
+
+.btn-comunidade {
+  font-family: "Philosopher", sans-serif;
+  width: 100%;
+  max-width: 400px; /* Limite de tamanho no Desktop */
+  height: 60px;
+  background: var(--fourth-color);
+  color: var(--fifth-color);
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+
+/* RESPONSIVIDADE INDEX */
+@media (max-width: 768px) {
+  .sobre-comunidade {
+    flex-direction: column; /* Imagem em cima, texto embaixo */
     text-align: center;
-    padding: 10px 20px;
-}
+  }
+  
+  .sec-sobre-nossa-comunidade {
+      font-family: "Philosopher", sans-serif;
+  font-size: 18px;
+  flex: 1;
+  text-align: center;
+  color: var(--third-color);
+  }
 
-.sec-sobre-nossa-comunidade p{ 
+  .btn-comunidade {
     font-family: "Philosopher", sans-serif;
-    font-size: 20px;
-    color: var(--third-color);
-}
+    max-width: 100%; /* Ocupa tudo no mobile */
+  }
 
-.btn-comunidade{
-    margin-top: 50px;
-    padding: 10px 15px;
-    justify-content: center;
-    align-items: center;
-    width: 640px;
-    background: var(--fourth-color);
-    border: none;
-    border-radius: 12px;
-    font-family: "Philosopher", sans-serif;
-    color: var(--fifth-color);
-    font-size: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: ease-in-out 0.3s;
-}
-
-.btn-comunidade:hover{
-    background: var(--third-color);
+  h2 { font-size: 28px; padding: 20px 0; }
 }

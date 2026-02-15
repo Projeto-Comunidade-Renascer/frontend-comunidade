@@ -8,75 +8,66 @@
   --fifth-color: #f3ebe1;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .footer {
-  display: flex;
-  width: 100%;
-  color: var(--fifth-color);
   background: var(--fourth-color);
-  flex-direction: column;
-  padding: 1rem;
-  margin-top: auto;
+  color: var(--fifth-color);
+  padding: 40px 5%;
+}
+
+.nome_logo{
+  font-family: "Playball", cursive;
+  font-size: 28px;
+  color: var(--fifth-color);
 }
 
 .top {
-  display: flex;
-  justify-content: space-around;
-  padding: 5px 10px;
-  border-bottom: var(--fifth-color) 1px solid;
-}
-
-.nome_logo {
-  font-family: "Playball", sans-serif;
-  text-align: center;
-  color: var(--fifth-color);
-  font-size: 25px;
-}
-
-.contatos {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  font-size: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas no PC */
+  gap: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--fifth-color);
 }
 
 .contatos h4 {
-  font-weight: bolder;
-}
-
-.texto_logo {
-  max-width: 200px;
-  line-height: 1.25;
-  padding: 15px 0 0 0;
+    font-family: "Poppins", sans-serif;
+  margin-bottom: 15px;
 }
 
 .links {
-  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
 }
-
 .links li {
-  padding: 15px 0 0 0;
+  margin-bottom: 10px;
 }
-
-.links li a {
-  text-decoration: none;
+.links a {
   color: var(--fifth-color);
-}
-
-.texto_redes {
-  max-width: 250px;
-  line-height: 1.25;
-  padding: 15px 0 0 0;
+  text-decoration: none;
 }
 
 .bottom {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
 }
 
-.bottom p {
-  max-width: 680px;
-  text-align: center;
-  line-height: 1.25;
-  padding: 0 30px;
+@media (max-width: 900px) {
+  .top {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    grid-template-columns: 1fr; /* 1 coluna no mobile */
+    text-align: center;
+  }
+  .contatos {
+    align-items: center;
+  }
 }
