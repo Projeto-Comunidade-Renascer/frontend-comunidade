@@ -12,9 +12,9 @@ const MenuMobile = ({ isOpen, onClose }) => {
         </button>
 
         <div className="mobile-user-section">
-            <FaUserAlt className="user-icon" />
+            <FaUserAlt className="user-icon-mobile" />
             <div className="search-bar-mobile">
-                <FaSearch className="search-icon" />
+                <FaSearch className="search-icon-mobile" />
                 <input type="text" placeholder="Pesquise aqui" />
             </div>
         </div>

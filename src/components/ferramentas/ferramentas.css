@@ -30,6 +30,7 @@ h3{
 }
 
 .ferramentas-container{
+    max-width: 100%;
     background-color: var(--sixth-color) ;
     padding: 80px;
     margin: 65px 0 37px 0;
@@ -50,4 +51,37 @@ h3{
 .ferramenta-item img {
   max-width: 80px;
   height: auto;
+}
+
+@media screen and (max-width: 470px) {
+    .ferramentas-container{
+        padding: 30px;
+        margin: 40px 0 20px 0;
+    }
+
+    .ferramentas-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ferramenta-item {
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 990px) {
+    .ferramentas-container{
+        padding: 30px;
+        margin: 40px 0 20px 0;
+    }
+
+    .ferramentas-lista {
+        align-items: center;
+    }
+
+    .ferramenta-item {
+        margin-bottom: 20px;
+    }
+    
 }
