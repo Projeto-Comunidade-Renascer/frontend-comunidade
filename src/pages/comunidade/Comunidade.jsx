@@ -1,22 +1,16 @@
-
-
-
+import Postagem from '../../components/postagem/Postagem.jsx';
+import '../../components/postagem/post.css';
 
 function Comunidade() {
 
     return (
-    <>
-                    <main className="conteudo-principal">
-                        
-                            <div className="sec-sobre-nossa-comunidade">
-                                <h2>Comunidade</h2>
-                              
-                        </div>
-
-                    </main>
-                </>
+        <>
+            <main>
+                <h2>Comunidade</h2>
+                <Postagem />
+            </main >
+        </>
         )
-
 }
 
 export default Comunidade;
