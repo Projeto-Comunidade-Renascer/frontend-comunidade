@@ -17,7 +17,7 @@ function Artigos() {
         </div>
       </div>
 
-      <div className="depoimentos-section" id="dep">
+      <div className="carrosel-artigo" id="art">
         <h2>Artigos Mais Recentes</h2>
       </div>
     </section>
