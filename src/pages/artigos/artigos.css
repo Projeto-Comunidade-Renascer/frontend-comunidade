@@ -14,9 +14,8 @@
   box-sizing: border-box;
 }
 
-.container-artigo{
-  display: flex;
-  flex-direction: column;
+.conteudo-principal {
+  padding: 60px 0;
 }
 
 .artigo-comunidade {
