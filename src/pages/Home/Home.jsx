@@ -1,16 +1,12 @@
-import Header from "./../../components/header/Header.jsx";
 import './index.css';
 import comunidadeImg from '../../assets/img/gravida.png';
-import Footer from "../../components/footer/Footer.jsx";
 import Ferramentas from "../../components/ferramentas/Ferramentas.jsx";
 
 
-function Index() {
+function Home() {
 
     return (
         <>
-            <Header />
-
             <main className="conteudo-principal">
                 <div className="sobre-comunidade">
                     <div className="img-comunidade-sec">
@@ -24,10 +20,9 @@ function Index() {
                 </div>
                 <Ferramentas/>
             </main>
-            <Footer />
         </>
         )
 
 }
 
-export default Index;
+export default Home;
